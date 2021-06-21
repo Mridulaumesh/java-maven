@@ -14,7 +14,7 @@ pipeline {
         stage('step 2: maven build'){
             steps{
                 script{
-                def MVN_PATH = tool (name: 'maven381', type: 'maven') + "/bin/mvn"
+                def MVN_PATH = tool (name: 'mvn', type: 'maven') + "/bin/mvn"
                 sh "$MVN_PATH package"
                 }
             }
